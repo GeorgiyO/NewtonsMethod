@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Метод Гаусса</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/big-buttons.css">
+    </head>
+    <body class="container  ">
+        <header>
+            <h1>
+                Метод Ньютона
+            </h1>
+        </header>
+        <main>
+            <section class="description">
+                <h1>О программе</h1>
+                <p>
+                    Метод Ньютона, алгоритм Ньютона (также известный как метод касательных) — это итерационный численный метод нахождения корня 
+                    (нуля) заданной функции. Метод был впервые предложен английским физиком, математиком и астрономом Исааком Ньютоном (1643—1727). 
+                    Поиск решения осуществляется путём построения последовательных приближений и основан на принципах простой итерации. Метод обладает 
+                    квадратичной сходимостью. Модификацией метода является метод хорд и касательных. Также метод Ньютона может быть использован для решения 
+                    задач оптимизации, в которых требуется определить ноль первой производной либо градиента в случае многомерного пространства.
+                </p>
+            </section>
+            <section>
+                <h1>Программа:</h1>
+                <div>
+                    <p>Введите функцию в виде JavaScript (разрешается использование библиотеки Math):</p>
+                    <input type="text" id="function" value="1 / Math.tan(x * 1.05) - Math.pow(x, 2)">
+                    <p>Точность подсчета результата:</p>
+                    <input type="number" id="precision" value="0.001">
+                    <p>Точность подсчета производной:</p>
+                    <input type="number" id="derivativePrecision" value="0.001">
+                    <div class="big-btn">
+                        <a class="btn" onclick="updateSettings()">Обновить настройки</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Введите значение 'X':</p>
+                    <input type="number" id="xValue" value="4">
+                </div>
+            </section>
+            <section>
+                <div class="big-btn">
+                    <a class="btn" onclick="getResult()">Получить результат</a>
+                </div>
+                <div id="result"></div>
+            </section>
+        </main>
+    </body>
+    <script src="js/ripple-button.js"></script>
+    <script src="js/NewtonsMethod.js"></script>
+    <script src="js/main.js"></script>
+</html>
